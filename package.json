@@ -4,9 +4,8 @@
   "description": "SSR + serverless quick deploy with Nuxt.js + Firebase",
   "scripts": {
     "clean": "mkdir -p public && rm -rf public/*",
-    "cp:assets": "cp -R functions/nuxt/dist public/assets",
     "cp:static": "cp -R functions/nuxt/dist/ public && cp -R src/static/* public",
-    "setup": "yarn clean && yarn cp:assets && yarn cp:static",
+    "setup": "yarn clean && yarn cp:static",
     "serve": "yarn setup && sudo firebase serve --only hosting,functions",
     "deploy": "yarn setup && firebase deploy"
   },
