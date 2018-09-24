@@ -23,7 +23,7 @@ module.exports = {
   buildDir: '../functions/nuxt',
   build: {
     publicPath: '/',
-    vendor: ['isomorphic-fetch', 'babel-polyfill'],
+    vendor: ['axios', 'babel-polyfill'],
     extractCSS: true,
     babel: {
       presets: [

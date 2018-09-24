@@ -1,5 +1,6 @@
 <template>
   <ul>
+    <li>axios</li>
     <li v-for="(fact, factIdx) in facts" :key="factIdx">
       {{ fact.text }}
     </li>
@@ -7,11 +8,12 @@
 </template>
 
 <script>
-import fetch from 'isomorphic-fetch'
+import axios from 'axios'
 export default {
 	async asyncData() {
-		const response = await fetch('https://nuxt-ssr.firebaseio.com/facts.json')
-		const facts = await response.json()
+		const res = await axios.get('https://nuxt-ssr.firebaseio.com/facts.json')
+		const facts = res.data
+    console.log('facts: ',facts)
 		return { facts }
 	}
 }
