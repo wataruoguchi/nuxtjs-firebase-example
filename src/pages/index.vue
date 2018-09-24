@@ -1,6 +1,5 @@
 <template>
   <ul>
-    <li>axios</li>
     <li v-for="(fact, factIdx) in facts" :key="factIdx">
       {{ fact.text }}
     </li>
