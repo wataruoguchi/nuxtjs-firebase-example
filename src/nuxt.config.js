@@ -20,9 +20,9 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: '../functions/nuxt',
+  buildDir: process.env.DEV ? '.nuxt' : '../functions/nuxt',
   build: {
-    publicPath: '/',
+    publicPath: process.env.DEV ? '/public/' : '/',
     vendor: ['axios', 'babel-polyfill'],
     extractCSS: true,
     babel: {

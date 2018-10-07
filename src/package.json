@@ -5,7 +5,7 @@
   "author": "Wataru Oguchi <wataru.oguchi.0to1@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "DEV=1 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
