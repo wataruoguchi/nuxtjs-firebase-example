@@ -2,3 +2,4 @@
 functions/nuxt/
 functions/node_modules/
 public/
+serviceAccountKey.json
